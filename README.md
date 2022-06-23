@@ -72,9 +72,9 @@ localhost:8000/api/get-transactions-summary
 
 localhost:8000/api/get-user-transaction
 
-{
+* {
     "success": true,
-    "data": {
+    * "data": {
         "user": {
             "id": 4,
             "name": "rita modam",
@@ -82,9 +82,9 @@ localhost:8000/api/get-user-transaction
             "email_verified_at": null,
             "created_at": "2022-06-21T14:59:25.000000Z",
             "updated_at": "2022-06-21T14:59:25.000000Z"
-        },
-        "wallets": [
-            {
+       *  },
+       * "wallets": [
+            * {
                 "id": 4,
                 "holder_type": "App\\Models\\User",
                 "holder_id": 4,
@@ -97,8 +97,8 @@ localhost:8000/api/get-user-transaction
                 "decimal_places": 2,
                 "created_at": "2022-06-21 21:55:54",
                 "updated_at": "2022-06-21 21:55:54"
-            },
-            {
+            * },
+            * {
                 "id": 5,
                 "holder_type": "App\\Models\\User",
                 "holder_id": 4,
@@ -111,8 +111,8 @@ localhost:8000/api/get-user-transaction
                 "decimal_places": 2,
                 "created_at": "2022-06-21 22:02:59",
                 "updated_at": "2022-06-21 22:02:59"
-            },
-            {
+           * },
+           * {
                 "id": 6,
                 "holder_type": "App\\Models\\User",
                 "holder_id": 4,
@@ -125,8 +125,8 @@ localhost:8000/api/get-user-transaction
                 "decimal_places": 2,
                 "created_at": "2022-06-22 10:35:01",
                 "updated_at": "2022-06-23 17:11:50"
-            },
-            {
+           * },
+            * {
                 "id": 7,
                 "holder_type": "App\\Models\\User",
                 "holder_id": 4,
@@ -139,10 +139,10 @@ localhost:8000/api/get-user-transaction
                 "decimal_places": 2,
                 "created_at": "2022-06-22 10:35:01",
                 "updated_at": "2022-06-23 17:11:50"
-            }
+           * }
         ],
-        "transactions": [
-            {
+        * "transactions": [
+           * {
                 "id": 3,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -154,8 +154,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "72f55548-4fa9-42c0-a7cc-c51d62780430",
                 "created_at": "2022-06-21 21:55:54",
                 "updated_at": "2022-06-21 21:55:54"
-            },
-            {
+           * },
+           * {
                 "id": 4,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -167,8 +167,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "e76ba861-c002-4b21-b44d-42ea15a732fd",
                 "created_at": "2022-06-22 10:35:01",
                 "updated_at": "2022-06-22 10:35:01"
-            },
-            {
+           * },
+           * {
                 "id": 5,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -180,8 +180,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "ceb76d42-1197-41a6-8b34-8b8f9289ccf2",
                 "created_at": "2022-06-22 10:35:01",
                 "updated_at": "2022-06-22 10:35:01"
-            },
-            {
+           * },
+           * {
                 "id": 6,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -193,8 +193,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "67586602-35bb-41b4-a25b-871d2c0c0509",
                 "created_at": "2022-06-22 10:35:01",
                 "updated_at": "2022-06-22 10:35:01"
-            },
-            {
+           * },
+           * {
                 "id": 7,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -206,8 +206,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "22bff3c5-8ee2-4e4d-a77d-098550d8ec12",
                 "created_at": "2022-06-22 10:57:47",
                 "updated_at": "2022-06-22 10:57:47"
-            },
-            {
+           * },
+           * {
                 "id": 8,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -219,8 +219,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "f3069bfe-d032-4664-82b5-1984820c466d",
                 "created_at": "2022-06-22 10:57:47",
                 "updated_at": "2022-06-22 10:57:47"
-            },
-            {
+           * },
+           * {
                 "id": 9,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -232,8 +232,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "a14ea187-643b-4bd9-9cbd-81a40f54028c",
                 "created_at": "2022-06-22 10:57:47",
                 "updated_at": "2022-06-22 10:57:47"
-            },
-            {
+           * },
+           * {
                 "id": 10,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -245,8 +245,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "4c402cae-6dc1-491b-97ff-6fb3f53aefc8",
                 "created_at": "2022-06-22 11:01:53",
                 "updated_at": "2022-06-22 11:01:53"
-            },
-            {
+           * },
+           * {
                 "id": 11,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -258,8 +258,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "6839eb44-d31a-446f-8e71-30677fc54ee6",
                 "created_at": "2022-06-22 11:01:53",
                 "updated_at": "2022-06-22 11:01:53"
-            },
-            {
+           * },
+           * {
                 "id": 12,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -271,8 +271,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "497cf8af-c23b-45a8-beab-1deef961fad7",
                 "created_at": "2022-06-22 11:01:53",
                 "updated_at": "2022-06-22 11:01:53"
-            },
-            {
+           * },
+           * {
                 "id": 13,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -284,8 +284,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "2ea25f74-612a-4fde-96eb-194373b51256",
                 "created_at": "2022-06-22 11:02:38",
                 "updated_at": "2022-06-22 11:02:38"
-            },
-            {
+           * },
+           * {
                 "id": 14,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -297,8 +297,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "8df9e87b-912a-4a6e-9a33-9f17528f2d2c",
                 "created_at": "2022-06-22 11:02:38",
                 "updated_at": "2022-06-22 11:02:38"
-            },
-            {
+           * },
+           * {
                 "id": 15,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -310,8 +310,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "512501b2-1574-451b-9f54-c56f862dde81",
                 "created_at": "2022-06-22 11:02:38",
                 "updated_at": "2022-06-22 11:02:38"
-            },
-            {
+           * },
+           * {
                 "id": 16,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -323,8 +323,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "07772bc3-f285-47dc-8a42-097b04597832",
                 "created_at": "2022-06-23 17:11:50",
                 "updated_at": "2022-06-23 17:11:50"
-            },
-            {
+           * },
+           * {
                 "id": 17,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -336,8 +336,8 @@ localhost:8000/api/get-user-transaction
                 "uuid": "80a10b2b-8cad-4021-840a-bf866e0f2b03",
                 "created_at": "2022-06-23 17:11:50",
                 "updated_at": "2022-06-23 17:11:50"
-            },
-            {
+           * },
+           * {
                 "id": 18,
                 "payable_type": "App\\Models\\User",
                 "payable_id": 4,
@@ -349,11 +349,11 @@ localhost:8000/api/get-user-transaction
                 "uuid": "a64c713d-48c0-4d38-8190-d1fe74ef5ed2",
                 "created_at": "2022-06-23 17:11:50",
                 "updated_at": "2022-06-23 17:11:50"
-            }
+           * }
         ]
-    },
+   * },
     "message": "user details!"
-}
+* }
 
 
 
