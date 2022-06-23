@@ -48,6 +48,694 @@ laravel framework was used for the assessment work
 - **POST localhost:8000/api/get-summary get-summary**
 - **POST localhost:8000/api/do-transfer**
 
+
+## sample output
+
+localhost:8000/api/get-all-users  //fetch all user
+
+{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "name": "magnificent",
+            "email": "ugochukw@gmail.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-20T19:29:14.000000Z",
+            "updated_at": "2022-06-20T19:29:14.000000Z"
+        },
+        {
+            "id": 2,
+            "name": "tony michael",
+            "email": "michael@mail.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-21T14:57:05.000000Z",
+            "updated_at": "2022-06-21T14:57:05.000000Z"
+        },
+        {
+            "id": 3,
+            "name": "james elliot",
+            "email": "elliot@mm.co.uk",
+            "email_verified_at": null,
+            "created_at": "2022-06-21T14:58:13.000000Z",
+            "updated_at": "2022-06-21T14:58:13.000000Z"
+        },
+        {
+            "id": 4,
+            "name": "rita modam",
+            "email": "rita@hotmail.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-21T14:59:25.000000Z",
+            "updated_at": "2022-06-21T14:59:25.000000Z"
+        }
+    ],
+    "message": "Available users"
+}
+
+
+### get summary of transactions
+
+localhost:8000/api/get-transactions-summary
+
+{
+    "success": true,
+    "data": {
+        "users": 4,
+        "wallets": 7,
+        "wallets Total Balance": "2600",
+        "Total Transactions": "2600"
+    },
+    "message": "successful"
+}
+
+
+### user transactions
+
+localhost:8000/api/get-user-transaction
+
+{
+    "success": true,
+    "data": {
+        "user": {
+            "id": 4,
+            "name": "rita modam",
+            "email": "rita@hotmail.com",
+            "email_verified_at": null,
+            "created_at": "2022-06-21T14:59:25.000000Z",
+            "updated_at": "2022-06-21T14:59:25.000000Z"
+        },
+        "wallets": [
+            {
+                "id": 4,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 4,
+                "name": "Default Wallet",
+                "slug": "default",
+                "uuid": "d5d041ee-0ccf-4bb8-bab2-645f323296da",
+                "description": null,
+                "meta": "[]",
+                "balance": "700",
+                "decimal_places": 2,
+                "created_at": "2022-06-21 21:55:54",
+                "updated_at": "2022-06-21 21:55:54"
+            },
+            {
+                "id": 5,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 4,
+                "name": "savings account",
+                "slug": "savings-account",
+                "uuid": "6f7ab972-c403-44f3-a2d6-a58659547406",
+                "description": null,
+                "meta": null,
+                "balance": "0",
+                "decimal_places": 2,
+                "created_at": "2022-06-21 22:02:59",
+                "updated_at": "2022-06-21 22:02:59"
+            },
+            {
+                "id": 6,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 4,
+                "name": "USD",
+                "slug": "USD-wallet-rita modam",
+                "uuid": "3c7147e6-4922-417a-894c-e0e00aa7f9f6",
+                "description": null,
+                "meta": null,
+                "balance": "425",
+                "decimal_places": 2,
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-23 17:11:50"
+            },
+            {
+                "id": 7,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 4,
+                "name": "EUR",
+                "slug": "EUR-wallet-rita modam",
+                "uuid": "10851bde-a2ce-4e4f-bc4f-007fffb19087",
+                "description": null,
+                "meta": null,
+                "balance": "75",
+                "decimal_places": 2,
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-23 17:11:50"
+            }
+        ],
+        "transactions": [
+            {
+                "id": 3,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 4,
+                "type": "deposit",
+                "amount": "700",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "72f55548-4fa9-42c0-a7cc-c51d62780430",
+                "created_at": "2022-06-21 21:55:54",
+                "updated_at": "2022-06-21 21:55:54"
+            },
+            {
+                "id": 4,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "e76ba861-c002-4b21-b44d-42ea15a732fd",
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-22 10:35:01"
+            },
+            {
+                "id": 5,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "ceb76d42-1197-41a6-8b34-8b8f9289ccf2",
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-22 10:35:01"
+            },
+            {
+                "id": 6,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "67586602-35bb-41b4-a25b-871d2c0c0509",
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-22 10:35:01"
+            },
+            {
+                "id": 7,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "22bff3c5-8ee2-4e4d-a77d-098550d8ec12",
+                "created_at": "2022-06-22 10:57:47",
+                "updated_at": "2022-06-22 10:57:47"
+            },
+            {
+                "id": 8,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "f3069bfe-d032-4664-82b5-1984820c466d",
+                "created_at": "2022-06-22 10:57:47",
+                "updated_at": "2022-06-22 10:57:47"
+            },
+            {
+                "id": 9,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "a14ea187-643b-4bd9-9cbd-81a40f54028c",
+                "created_at": "2022-06-22 10:57:47",
+                "updated_at": "2022-06-22 10:57:47"
+            },
+            {
+                "id": 10,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "4c402cae-6dc1-491b-97ff-6fb3f53aefc8",
+                "created_at": "2022-06-22 11:01:53",
+                "updated_at": "2022-06-22 11:01:53"
+            },
+            {
+                "id": 11,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "6839eb44-d31a-446f-8e71-30677fc54ee6",
+                "created_at": "2022-06-22 11:01:53",
+                "updated_at": "2022-06-22 11:01:53"
+            },
+            {
+                "id": 12,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "497cf8af-c23b-45a8-beab-1deef961fad7",
+                "created_at": "2022-06-22 11:01:53",
+                "updated_at": "2022-06-22 11:01:53"
+            },
+            {
+                "id": 13,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "2ea25f74-612a-4fde-96eb-194373b51256",
+                "created_at": "2022-06-22 11:02:38",
+                "updated_at": "2022-06-22 11:02:38"
+            },
+            {
+                "id": 14,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "8df9e87b-912a-4a6e-9a33-9f17528f2d2c",
+                "created_at": "2022-06-22 11:02:38",
+                "updated_at": "2022-06-22 11:02:38"
+            },
+            {
+                "id": 15,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "512501b2-1574-451b-9f54-c56f862dde81",
+                "created_at": "2022-06-22 11:02:38",
+                "updated_at": "2022-06-22 11:02:38"
+            },
+            {
+                "id": 16,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "07772bc3-f285-47dc-8a42-097b04597832",
+                "created_at": "2022-06-23 17:11:50",
+                "updated_at": "2022-06-23 17:11:50"
+            },
+            {
+                "id": 17,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "80a10b2b-8cad-4021-840a-bf866e0f2b03",
+                "created_at": "2022-06-23 17:11:50",
+                "updated_at": "2022-06-23 17:11:50"
+            },
+            {
+                "id": 18,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "a64c713d-48c0-4d38-8190-d1fe74ef5ed2",
+                "created_at": "2022-06-23 17:11:50",
+                "updated_at": "2022-06-23 17:11:50"
+            }
+        ]
+    },
+    "message": "user details!"
+}
+
+### fetch all wallet
+
+localhost:8000/api/get-all-wallets
+
+{
+    "success": true,
+    "data": {
+        "wallets": [
+            {
+                "id": 1,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 1,
+                "name": "USD account",
+                "slug": "USD-account",
+                "uuid": "7f8060e8-afbf-4edf-8603-d660a999d817",
+                "description": null,
+                "meta": null,
+                "balance": "0",
+                "decimal_places": 2,
+                "created_at": "2022-06-21 17:30:32",
+                "updated_at": "2022-06-21 17:30:32"
+            },
+            {
+                "id": 2,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 1,
+                "name": "EU account",
+                "slug": "EU-account",
+                "uuid": "3d6953ec-0979-49a1-aa22-f18959d10801",
+                "description": null,
+                "meta": null,
+                "balance": "0",
+                "decimal_places": 2,
+                "created_at": "2022-06-21 18:25:02",
+                "updated_at": "2022-06-21 18:25:02"
+            },
+            {
+                "id": 3,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 1,
+                "name": "Default Wallet",
+                "slug": "default",
+                "uuid": "a2b191ad-fe12-403e-b6b7-dcc3c9dc8294",
+                "description": null,
+                "meta": "[]",
+                "balance": "1400",
+                "decimal_places": 2,
+                "created_at": "2022-06-21 21:43:49",
+                "updated_at": "2022-06-21 21:46:09"
+            },
+            {
+                "id": 4,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 4,
+                "name": "Default Wallet",
+                "slug": "default",
+                "uuid": "d5d041ee-0ccf-4bb8-bab2-645f323296da",
+                "description": null,
+                "meta": "[]",
+                "balance": "700",
+                "decimal_places": 2,
+                "created_at": "2022-06-21 21:55:54",
+                "updated_at": "2022-06-21 21:55:54"
+            },
+            {
+                "id": 5,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 4,
+                "name": "savings account",
+                "slug": "savings-account",
+                "uuid": "6f7ab972-c403-44f3-a2d6-a58659547406",
+                "description": null,
+                "meta": null,
+                "balance": "0",
+                "decimal_places": 2,
+                "created_at": "2022-06-21 22:02:59",
+                "updated_at": "2022-06-21 22:02:59"
+            },
+            {
+                "id": 6,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 4,
+                "name": "USD",
+                "slug": "USD-wallet-rita modam",
+                "uuid": "3c7147e6-4922-417a-894c-e0e00aa7f9f6",
+                "description": null,
+                "meta": null,
+                "balance": "425",
+                "decimal_places": 2,
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-23 17:11:50"
+            },
+            {
+                "id": 7,
+                "holder_type": "App\\Models\\User",
+                "holder_id": 4,
+                "name": "EUR",
+                "slug": "EUR-wallet-rita modam",
+                "uuid": "10851bde-a2ce-4e4f-bc4f-007fffb19087",
+                "description": null,
+                "meta": null,
+                "balance": "75",
+                "decimal_places": 2,
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-23 17:11:50"
+            }
+        ]
+    },
+    "message": "Available wallets"
+}
+
+
+### do transfer between wallets
+
+localhost:8000/api/do-transfer //wallet transfer
+
+{
+    "success": true,
+    "data": {
+        "user": "rita modam",
+        "description": "deposit of 100 in USD wallet before transfer of 15 to EUR wallet",
+        "USD balance before transfer": "340",
+        "EUR balance before transfer": "60",
+        "USD balance after transfer": "425",
+        "EUR balance after transfer": "75",
+        "default wallet": "700",
+        "transactions": [
+            {
+                "id": 3,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 4,
+                "type": "deposit",
+                "amount": "700",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "72f55548-4fa9-42c0-a7cc-c51d62780430",
+                "created_at": "2022-06-21 21:55:54",
+                "updated_at": "2022-06-21 21:55:54"
+            },
+            {
+                "id": 4,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "e76ba861-c002-4b21-b44d-42ea15a732fd",
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-22 10:35:01"
+            },
+            {
+                "id": 5,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "ceb76d42-1197-41a6-8b34-8b8f9289ccf2",
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-22 10:35:01"
+            },
+            {
+                "id": 6,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "67586602-35bb-41b4-a25b-871d2c0c0509",
+                "created_at": "2022-06-22 10:35:01",
+                "updated_at": "2022-06-22 10:35:01"
+            },
+            {
+                "id": 7,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "22bff3c5-8ee2-4e4d-a77d-098550d8ec12",
+                "created_at": "2022-06-22 10:57:47",
+                "updated_at": "2022-06-22 10:57:47"
+            },
+            {
+                "id": 8,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "f3069bfe-d032-4664-82b5-1984820c466d",
+                "created_at": "2022-06-22 10:57:47",
+                "updated_at": "2022-06-22 10:57:47"
+            },
+            {
+                "id": 9,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "a14ea187-643b-4bd9-9cbd-81a40f54028c",
+                "created_at": "2022-06-22 10:57:47",
+                "updated_at": "2022-06-22 10:57:47"
+            },
+            {
+                "id": 10,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "4c402cae-6dc1-491b-97ff-6fb3f53aefc8",
+                "created_at": "2022-06-22 11:01:53",
+                "updated_at": "2022-06-22 11:01:53"
+            },
+            {
+                "id": 11,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "6839eb44-d31a-446f-8e71-30677fc54ee6",
+                "created_at": "2022-06-22 11:01:53",
+                "updated_at": "2022-06-22 11:01:53"
+            },
+            {
+                "id": 12,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "497cf8af-c23b-45a8-beab-1deef961fad7",
+                "created_at": "2022-06-22 11:01:53",
+                "updated_at": "2022-06-22 11:01:53"
+            },
+            {
+                "id": 13,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "2ea25f74-612a-4fde-96eb-194373b51256",
+                "created_at": "2022-06-22 11:02:38",
+                "updated_at": "2022-06-22 11:02:38"
+            },
+            {
+                "id": 14,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "8df9e87b-912a-4a6e-9a33-9f17528f2d2c",
+                "created_at": "2022-06-22 11:02:38",
+                "updated_at": "2022-06-22 11:02:38"
+            },
+            {
+                "id": 15,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "512501b2-1574-451b-9f54-c56f862dde81",
+                "created_at": "2022-06-22 11:02:38",
+                "updated_at": "2022-06-22 11:02:38"
+            },
+            {
+                "id": 16,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "deposit",
+                "amount": "100",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "07772bc3-f285-47dc-8a42-097b04597832",
+                "created_at": "2022-06-23 17:11:50",
+                "updated_at": "2022-06-23 17:11:50"
+            },
+            {
+                "id": 17,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 6,
+                "type": "withdraw",
+                "amount": "-15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "80a10b2b-8cad-4021-840a-bf866e0f2b03",
+                "created_at": "2022-06-23 17:11:50",
+                "updated_at": "2022-06-23 17:11:50"
+            },
+            {
+                "id": 18,
+                "payable_type": "App\\Models\\User",
+                "payable_id": 4,
+                "wallet_id": 7,
+                "type": "deposit",
+                "amount": "15",
+                "confirmed": 1,
+                "meta": null,
+                "uuid": "a64c713d-48c0-4d38-8190-d1fe74ef5ed2",
+                "created_at": "2022-06-23 17:11:50",
+                "updated_at": "2022-06-23 17:11:50"
+            }
+        ]
+    },
+    "message": "successful"
+}
+
 ### routes/api
 
 Route::controller(RegisterController::class)->group(function(){
