@@ -97,7 +97,7 @@ localhost:8000/api/get-all-users  //fetch all user
 
 localhost:8000/api/get-transactions-summary
 
-{
+**{
     "success": true,
     "data": {
         "users": 4,
@@ -106,7 +106,7 @@ localhost:8000/api/get-transactions-summary
         "Total Transactions": "2600"
     },
     "message": "successful"
-}
+}**
 
 
 ### user transactions
